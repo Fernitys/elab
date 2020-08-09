@@ -1,0 +1,13 @@
+input("What is your first name? ")
+
+
+input("What is your last name? ")
+
+
+AD = int(input("Enter a year in A.D.: "))
+print("The year in B.E. is", AD+543)
+
+
+width = float(input("Enter rectangle's width: "))
+height = float(input("Enter rectangle's height: "))
+print("The area of the rectangle is", (width*height))

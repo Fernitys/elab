@@ -1,0 +1,19 @@
+def calendar(year):
+    
+    if year <= 0:
+        print('Invalid input: input year must be positive')
+        
+    elif 1 <= year <=1751 and year%4 == 0:
+        print(f'AD {year} is a leap year')
+
+    elif year >= 1752 and year%400 == 0:
+        print(f'AD {year} is a leap year')
+
+    elif year >= 1752 and year%4 == 0 and year%100 != 0 and year%400 != 0:
+        print(f'AD {year} is a leap year')
+        
+    else:
+        print(f'AD {year} is not a leap year')
+        
+y = int(input('Enter the year (AD): '))
+calendar(y)

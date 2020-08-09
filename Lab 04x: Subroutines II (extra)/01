@@ -1,0 +1,9 @@
+def miles_to_kilometers(mi):
+    kilo_d = mi*KILOMETERS_PER_MILE
+    return kilo_d
+    
+KILOMETERS_PER_MILE = 1.609
+
+mile = float(input('Enter the distance in miles: '))
+kilo = miles_to_kilometers(mile)
+print(f'The distance is {kilo:.2f} kilometers.')

@@ -1,0 +1,75 @@
+LAB = "turtlelab5x.py"
+import urllib.request
+urllib.request.urlretrieve(f"http://elab.cpe.ku.ac.th/turtlelab/{LAB}",LAB)
+
+from turtlelab5x import turtle,mickey,raph,leo,donnie,check
+
+
+def mickey_x():
+    turtle.forward(mickey.x)
+
+def mickey_y():
+    turtle.left(90)
+    turtle.forward(mickey.y)
+
+def raph_x():
+    turtle.left(90)
+    turtle.forward(-raph.x + mickey.x)
+
+def raph_y():
+    if raph.y > mickey.y:
+        turtle.right(90)
+        turtle.forward(raph.y-mickey.y)
+    else:
+        turtle.left(90)
+        turtle.forward(mickey.y-raph.y)
+
+def leo_x():
+    if raph.y > mickey.y:
+        if raph.x > leo.x:
+            turtle.left(90)
+            turtle.forward(-leo.x+raph.x)
+        else:
+            turtle.right(90)
+            turtle.forward(-raph.x+leo.x)
+    else:
+        if raph.x > leo.x:
+            turtle.right(90)
+            turtle.forward(-leo.x+raph.x)
+        else:
+            turtle.left(90)
+            turtle.forward(-raph.x+leo.x)
+
+def leo_y():
+    if raph.x > leo.x:        #
+        turtle.left(90)
+        turtle.forward(raph.y-leo.y)
+
+    else:
+        turtle.right(90)
+        turtle.forward(raph.y-leo.y)
+
+def donnie_x():
+    turtle.left(90)
+    turtle.forward(-leo.x+donnie.x)
+
+def donnie_y():
+    if donnie.y > leo.y:
+        turtle.left(90)
+        turtle.forward(-leo.y+donnie.y)
+    else:
+        turtle.right(90)
+        turtle.forward(-donnie.y+leo.y)
+
+def turtle_journey():
+    mickey_x()
+    mickey_y()
+    raph_x()
+    raph_y()
+    leo_x()
+    leo_y()
+    donnie_x()
+    donnie_y()
+
+turtle_journey()
+check()

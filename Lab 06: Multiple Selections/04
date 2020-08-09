@@ -1,0 +1,24 @@
+def grade(score):
+    if score >=80:
+       return 'A'
+    elif score >=75:
+       return 'B+'
+    elif score >=70:
+       return 'B'
+    elif score >=65:
+       return 'C+'
+    elif score >=60:
+       return 'C'
+    elif score >=55:
+       return 'D+'
+    elif score >=50:
+       return 'D'
+    else:
+       return 'F'
+       
+h = int(input('Enter the percentage for homework: '))
+m = int(input('Enter the percentage for midterm: '))
+f = int(input('Enter the percentage for final: '))
+score = (h*0.1)+(m*0.35)+(f*0.55)
+print(f'Your total score is {score:.2f}')
+print(f'You receive the grade {grade(score)}')

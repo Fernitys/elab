@@ -1,0 +1,13 @@
+def triangle(x,y,z):
+    if x+y>z and x+z>y and y+z>x :
+        if (x*x+y*y) == z*z or (x*x+z*z) == y*y or (y*y+z*z) == x*x :
+            return "It's a right triangle."
+        else:
+            return "It's a triangle but not a right triangle."
+    else:
+        return "It's not a triangle."
+
+n1 = float(input("Enter 1st line's length: "))
+n2 = float(input("Enter 2nd line's length: "))
+n3 = float(input("Enter 3rd line's length: "))
+print(triangle(n1,n2,n3))

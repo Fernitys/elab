@@ -1,0 +1,12 @@
+def value():
+    weight = float(input('What is your weight (kg)? '))
+    height = float(input('What is your height (cm)? '))
+    return weight,height
+
+def compute(weight,height):
+    bmi_d = weight/(height/100)**2
+    return bmi_d
+
+w,h = value()
+bmi = compute(w,h)
+print(f'Your BMI is {bmi:.2f}')

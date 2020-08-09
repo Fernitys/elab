@@ -1,0 +1,6 @@
+import math
+
+minute = float(input('Enter parking time in minutes: '))
+m = math.ceil(minute/60)*25
+
+print(f'Parking fee is {m} baht.')

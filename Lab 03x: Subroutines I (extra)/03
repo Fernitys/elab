@@ -1,0 +1,15 @@
+import math
+
+def sphere_volume(r):
+    vol_d = 4/3*math.pi*r**3
+    return vol_d
+    
+def sphere_surface_area(r):
+    area_d = 4*math.pi*r**2
+    return area_d
+
+r = float(input('Enter sphere radius: '))
+vol = sphere_volume(r)
+area = sphere_surface_area(r)
+print(f'Sphere volume is {vol:.2f}')
+print(f'Sphere surface area is {area:.2f}')

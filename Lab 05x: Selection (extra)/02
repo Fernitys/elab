@@ -1,0 +1,13 @@
+def cal(x, y):
+    if 5 < x <= 20:
+        ans = (4 * x * y) + 5
+        return ans
+    else:
+        ans = x**2 - (100 * y)
+        return ans
+
+
+x = float(input('Enter x: '))
+y = float(input('Enter y: '))
+
+print(f'f({x:.3f},{y:.3f}) = {cal(x,y):.3f}')

@@ -1,0 +1,10 @@
+print(f"|{name:<20}|")
+
+
+print(f"|{name:>20}|")
+
+
+print(f"|{name:^20}|")
+
+
+print(f"|{x:>20.3f}|")

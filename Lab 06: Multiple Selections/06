@@ -1,0 +1,64 @@
+LAB = "turtlelab6.py"
+import urllib.request
+urllib.request.urlretrieve(f"http://elab.cpe.ku.ac.th/turtlelab/{LAB}.15", LAB)
+
+from turtlelab6 import turtle, home, nemo, mozart, check
+from math import sqrt, atan2, degrees
+
+def complete(dist1, dist2):
+    if dist1 < dist2:         #1.origin > 2.nemo > 3.mozart > 4.home
+        turtle.left(a1ne)     #1
+        turtle.forward(d1ne)  #2
+        turtle.left(-a1ne)    #2
+        turtle.left(a2mo)     #2
+        turtle.forward(d2mo)  #3
+        turtle.left(-a2mo)    #3
+        turtle.left(a3mo)     #3
+        turtle.forward(d3mo)  #4
+
+    elif dist1 > dist2:       #1.origin > 2.mozart > 3.nemo > 4.home
+        turtle.left(a1mo)     #1
+        turtle.forward(d1mo)  #2
+        turtle.left(-a1mo)    #2
+        turtle.left(a2ne)     #2
+        turtle.forward(d2ne)  #3
+        turtle.left(-a2ne)    #3
+        turtle.left(a3ne)     #3
+        turtle.forward(d3ne)  #4
+
+
+  #first_distance
+d1ne = sqrt(nemo.x**2 + nemo.y**2)           #origin > nemo
+d1mo = sqrt(mozart.x**2 + mozart.y**2)       #origin > mozart
+
+  #first_degrees
+a1ne = degrees(atan2(nemo.y, nemo.x))        #origin > nemo
+a1mo = degrees(atan2(mozart.y, mozart.x))    #origin > mozart
+
+  #second_distance
+dist1_2nd = mozart.x - nemo.x
+dist2_2nd = mozart.y - nemo.y
+dist3_2nd = nemo.x - mozart.x
+dist4_2nd = nemo.y - mozart.y
+d2mo = sqrt(dist1_2nd**2 + dist2_2nd**2)     #nemo > mozart
+d2ne = sqrt(dist3_2nd**2 + dist4_2nd**2)     #mozart > nemo
+
+  #second_degrees
+a2mo = degrees(atan2(dist2_2nd, dist1_2nd))  #nemo > mozart
+a2ne = degrees(atan2(dist4_2nd, dist3_2nd))  #mozart > nemo
+
+  #third_distance
+dist1_3rd = home.x - mozart.x
+dist2_3rd = home.y - mozart.y
+dist3_3rd = home.x - nemo.x
+dist4_3rd = home.y - nemo.y
+d3mo = sqrt(dist1_3rd**2 + dist2_3rd**2)     #mozart > home
+d3ne = sqrt(dist3_3rd**2 + dist4_3rd**2)     #nemo > home
+
+  #third_degrees
+a3mo = degrees(atan2(dist2_3rd, dist1_3rd))  #mozart > home
+a3ne = degrees(atan2(dist4_3rd, dist3_3rd))  #nemo > home
+
+complete(d1ne, d1mo)
+
+check()

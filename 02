@@ -1,0 +1,21 @@
+def quadrant(x,y):
+  if x > 0 and y > 0:
+      return 'in quadrant 1'
+  elif x < 0 and y > 0:
+      return 'in quadrant 2'
+  elif x < 0 and y < 0:
+      return 'in quadrant 3'
+  elif x > 0 and y < 0:
+      return 'in quadrant 4'
+  elif x == 0 and y != 0:
+      return 'on the y-axis'
+  elif y == 0 and x != 0:
+      return 'on the x-axis'
+  else:
+      return 'at the origin'
+
+
+print('Input a point (x,y):')
+x = float(input('x = ? ')) 
+y = float(input('y = ? '))
+print(f'The point ({x:.2f},{y:.2f}) is {quadrant(x,y)}.')

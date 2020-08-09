@@ -1,0 +1,10 @@
+def cal(x):
+    if x <=15:
+        return (x*2)+10
+    elif x <=35:
+        return 3*x*x
+    else:
+        return (2*x**3)-5
+
+num = float(input('Enter a real number: '))
+print(f'f({num:.3f}) = {cal(num):.3f}')

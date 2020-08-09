@@ -1,0 +1,3 @@
+cost = 50+95+270+705+45+190+100
+pay = cost*0.9
+print(f"The discounted cost is {pay:.2f}")

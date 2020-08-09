@@ -1,0 +1,8 @@
+NameError: name 'Goodbye' is not defined
+
+
+quote missing ("Goodbye")
+
+
+print("Hello")
+print("Goodbye")

@@ -1,0 +1,14 @@
+import math
+
+it = float(input('Enter initial amount in Baht: '))
+ir = float(input('Enter interest rate in percent: '))
+
+ans1 = it*(1+ir/100)
+ans5 = it*(1+ir/100)**5
+ans10 = it*(1+ir/100)**10
+ans20 = it*(1+ir/100)**20
+
+print(f'Total amount after 1 year is {ans1:.2f} Baht.')
+print(f'Total amount after 5 years is {ans5:.2f} Baht.')
+print(f'Total amount after 10 years is {ans10:.2f} Baht.')
+print(f'Total amount after 20 years is {ans20:.2f} Baht.')

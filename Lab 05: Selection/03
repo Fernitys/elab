@@ -1,0 +1,12 @@
+    if hours >= 24:
+       fee = hours*20
+       return fee + 100
+
+
+duration >= 30
+
+
+1
+
+
+2

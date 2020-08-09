@@ -1,0 +1,14 @@
+def value():
+    print("Please specify your trapezoid's properties.")
+    side_1 = float(input('Length of side a: '))
+    side_2 = float(input('Length of side b: '))
+    height = float(input("Height: "))
+    return side_1,side_2,height
+
+def compute(s_1,s_2,h):
+    area_d = ((s_1+s_2)/2)*h
+    return area_d
+
+s_1,s_2,h = value()
+area = compute(s_1,s_2,h)
+print(f"Trapezoid's area is {area:.2f}")

@@ -1,0 +1,5 @@
+pas = int(input("How many seconds have passed? "))
+min = pas%3600//60
+sec = pas%60
+hr = pas//3600
+print(f"That equals {hr} hour(s) {min} minute(s) and {sec} second(s).")

@@ -1,0 +1,16 @@
+def discount(total):
+    if total >= 2000:
+       discount = total*0.05
+       payment = total - discount
+       print(f'You got a discount of {discount:.2f} baht.')
+       print(f'Your payment is {payment:.2f} baht. Thank you.')
+    else :
+       print(f'Your payment is {total:.2f} baht. Thank you.')
+    return 
+
+tv = int(input('How many TVs? '))
+dvd = int(input('How many DVD players? '))
+audio = int(input('How many audio systems? '))
+total = (tv*600) + (dvd*150) + (audio*300)
+print(f'The total amount is {total:.2f} baht.')
+discount(total)

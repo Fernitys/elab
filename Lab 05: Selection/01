@@ -1,0 +1,16 @@
+is_odd
+
+
+divisible_by_7(x)
+
+ 
+too_fast(180)
+
+ 
+x%2 != 1
+
+ 
+divisible_by_7(x+12)
+
+ 
+too_fast(80)

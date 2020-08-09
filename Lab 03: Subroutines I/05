@@ -1,0 +1,9 @@
+import math
+x = float(input('Enter x: '))
+y = float(input('Enter y: '))
+d = float(input('Enter d: '))
+
+area = x*y
+c = math.pi*d**2/4
+lawn = area-c
+print(f'Area of the lawn is {lawn:.2f} sq.m.')

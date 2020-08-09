@@ -1,0 +1,32 @@
+LAB = "turtlelab5.py"
+import urllib.request
+urllib.request.urlretrieve(f"http://elab.cpe.ku.ac.th/turtlelab/{LAB}.10",LAB)
+
+from turtlelab5 import turtle,luigi,check
+
+
+
+def x():
+    if luigi.x >= 0:
+        turtle.forward(luigi.x)
+    else:
+        turtle.left(180)
+        turtle.forward(-luigi.x)
+
+def y():
+    if luigi.y >= 0 and luigi.x >= 0:
+       turtle.left(90)
+       turtle.forward(luigi.y)
+    elif luigi.y >= 0 and luigi.x <= 0:
+       turtle.right(90)
+       turtle.forward(luigi.y)
+    elif luigi.y <= 0 and luigi.x >= 0:
+       turtle.right(90)
+       turtle.forward(-luigi.y)
+    elif luigi.y <= 0 and luigi.x <= 0:
+       turtle.left(90)
+       turtle.forward(-luigi.y)
+
+x()
+y()
+check()

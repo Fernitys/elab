@@ -1,0 +1,25 @@
+LAB = "turtlelab4.py"
+import urllib.request
+urllib.request.urlretrieve(f"http://elab.cpe.ku.ac.th/turtlelab/{LAB}.1",LAB)
+
+from turtlelab4 import turtle,check
+
+def paint_square(size):
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+
+def paint_triangle(size):
+    turtle.forward(size)
+    turtle.left(120)
+    turtle.forward(size)
+    turtle.left(120)
+    turtle.forward(size)
+    turtle.left(120)
+
+check()

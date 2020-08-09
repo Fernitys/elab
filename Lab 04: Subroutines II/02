@@ -1,0 +1,3 @@
+    area = length*width
+    peri = length*2+width*2
+    return area,peri

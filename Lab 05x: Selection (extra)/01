@@ -1,0 +1,33 @@
+import sys
+
+def is_triangle(x,y,z):
+    if x+y>z and x+z>y and y+z>x :
+        return True
+    else:
+        return False
+
+def read_nonnegative(x):
+    c = float(input(x))
+    if c >= 0:
+        return c
+    else:
+        print('Invalid value: input must be nonnegative')
+        sys.exit()
+
+def check_pos(f):
+    if f >= 0:
+        return f
+    else:
+        print('Invalid value: input must be nonnegative')
+        sys.exit()
+
+def check_tri(x,y,z):
+    if x+y>z and x+z>y and y+z>x :
+        return "It's a triangle."
+    else:
+        return "It's not a triangle."
+
+num1 = check_pos(float(input("Enter 1st line's length: ")))
+num2 = check_pos(float(input("Enter 2nd line's length: ")))
+num3 = check_pos(float(input("Enter 3rd line's length: ")))
+print(check_tri(num1,num2,num3))

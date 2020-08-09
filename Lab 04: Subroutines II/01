@@ -1,0 +1,5 @@
+y = 88
+
+
+    ans = EXCHANGE_RATE*100
+    return ans

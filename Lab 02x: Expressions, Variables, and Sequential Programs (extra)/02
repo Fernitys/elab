@@ -1,0 +1,5 @@
+x = int(input("Enter width: "))
+y = int(input("Enter length: "))
+one = x*y
+sol = one//100
+print(f"The landlord will have {sol} of land available for sale.")

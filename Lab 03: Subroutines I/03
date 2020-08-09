@@ -1,0 +1,11 @@
+song("cow","moo")
+
+
+    area = length*width
+    return area
+
+
+    return value*2
+
+
+    print(value*2)

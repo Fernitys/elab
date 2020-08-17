@@ -1,0 +1,5 @@
+msg = input("Input a string: ")
+
+for i in range(0,len(msg),1):
+    space = ' ' * round(i)
+    print(f'{space}{msg[i]}')

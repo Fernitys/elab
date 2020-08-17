@@ -1,0 +1,12 @@
+for _ in range(num):
+    print(msg)
+    
+  
+for i in range(num):
+    print(f'{msg} #{i+1}')
+    
+    
+x**2
+
+
+x in range(5)

@@ -1,0 +1,5 @@
+num = int(input("What is the size of block? "))
+msg = input("What is the character to use? ")
+msg2 = msg * (num)
+for i in range(num):
+    print(f"{msg2}")

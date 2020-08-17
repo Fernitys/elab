@@ -1,0 +1,16 @@
+'abcdefghijklm'
+
+
+"I..i.e..r"
+
+
+"g.e.t"
+
+
+range(len(msg))
+
+
+range(0,len(msg),2)
+
+
+range(1,len(msg),2)

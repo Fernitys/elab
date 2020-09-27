@@ -1,1 +1,7 @@
-
+    if s == PASSWORD:
+        break
+        
+        
+    if n%33 == n%273:
+        break
+    n = n + 1

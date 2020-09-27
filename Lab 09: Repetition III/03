@@ -1,0 +1,6 @@
+n = input('Input N (or just ENTER to quit): ')
+while n != '':
+    n = int(n)
+    for i in range(1,13,1):
+            print(f'{n} x {i} = {n*i}')
+    n = input('Input N (or just ENTER to quit): ')

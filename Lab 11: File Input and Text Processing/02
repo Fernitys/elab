@@ -1,0 +1,16 @@
+open("planets.txt").read().splitlines()
+
+
+open("planets.txt").read().splitlines()
+
+
+[x for x in lines if x != ""]
+
+
+open("numbers.txt").read().splitlines()
+
+
+[float(x) for x in lines if x != ""]
+
+
+sum(numbers)/len(numbers)

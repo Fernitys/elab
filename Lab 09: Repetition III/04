@@ -1,0 +1,16 @@
+n = 0
+while True:
+  n = n+1
+  password = input("Enter your password: ")
+  if password == "Programming is fun":
+    print("Correct password")
+    print("Access allowed")
+    break
+  elif (password != "Programming is fun") and n == 3:
+    print(f"Password is wrong, attempt #{n}")
+    print("Access denied")
+    print("Maximum attempts exceeded")
+    break
+  else:
+    print(f"Password is wrong, attempt #{n}")
+    print("Access denied")

@@ -1,0 +1,12 @@
+import statistics
+import numpy as np
+
+table = np.loadtxt(input('Enter file name: '))
+n = len(table)
+xbar = sum(table)/n
+stdev = statistics.stdev(table)
+print(f'Size of the data set is {n}')
+print(f'Minimum is {min(table):.2f}')
+print(f'Maximum is {max(table):.2f}')
+print(f'Mean is {xbar:.2f}')
+print(f'Standard deviation is {stdev:.2f}')

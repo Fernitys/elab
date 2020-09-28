@@ -1,0 +1,26 @@
+John, 66.3, 170.2
+Jane, 54.1, 162.8
+Jimmy, 89.5, 179.8
+
+
+    [ "John", 66.3, 170.2],
+    [ "Jane", 54.1, 162.8 ],
+    [ "Jimmy", 89.5, 179.8 ],
+
+
+[3]
+
+
+[1]
+
+
+[2][0]
+
+
+[0][1]
+
+
+[table[i][0] for i in range(len(table))]
+
+
+[x for x in table if x[len(x)-1] %2 == 0]

@@ -1,0 +1,37 @@
+import statistics
+score = []
+add = 0
+
+def grade(i):
+    if i >= avg+(1.5*sd):
+        return 'A'
+    elif avg + 1*sd <= i < avg+1.5*sd:
+        return 'B+'
+    elif avg + 0.5*sd <= i < avg+1*sd:
+        return 'B'
+    elif avg <= i < avg+0.5*sd:
+        return 'C+'
+    elif avg-0.5*sd <= i < avg:
+        return 'C'
+    elif avg - 1*sd <= i < avg-0.5*sd:
+        return 'D+'
+    elif avg - 1.5*sd <= i < avg-1*sd:
+        return 'D'
+    else:
+        return 'F'
+
+    
+while add !='' :
+    add = input('Input score (or just ENTER to finish): ')
+    if add =='':
+        break
+    score.append(int(add))
+
+avg = sum(score)/len(score)
+sd = statistics.stdev(score)
+
+print(f'Average score is {avg:.2f}')
+print(f'Standard deviation is {sd:.2f}')
+
+for i in range(len(score)):
+    print(f'Score #{i+1}: {score[i]} grade: {grade(score[i])}')

@@ -1,0 +1,38 @@
+def grade_point(grade):
+    if grade == "A":
+        return 4.0
+    elif grade == "B+":
+        return 3.5
+    elif grade == "B":
+        return 3.0
+    elif grade == "C+":
+        return 2.5
+    elif grade == "C":
+        return 2.0
+    elif grade == "D+":
+        return 1.5
+    elif grade == "D":
+        return 1.0
+    elif grade == "F":
+        return 0.0
+    
+def read_table(filename):
+    lines = open(filename).read().splitlines()
+    table = [x.split(",") for x in lines if x != ""]
+    for row in table:
+        row[1] = int(row[1])
+        row.append(grade_point(row[2]))
+    return table
+
+def print_table(table):
+    for row in table:
+        print(f"subject: {row[0]} credits: {row[1]} grade: {row[2]:2} point: {row[3]:.1f}")
+
+filename = input("Enter grade file: ")
+table = read_table(filename)
+print_table(table)
+total_credits = sum([row[1] for row in table])
+sum_credits_point = sum([row[1]*row[3] for row in table])
+gpa = sum_credits_point/total_credits
+print(f"Total credits = {total_credits}")
+print(f"GPA = {gpa:.2f}")

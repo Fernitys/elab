@@ -1,0 +1,14 @@
+score = []
+add = 0
+while add !='' :
+    add = input('Input score (or just ENTER to finish): ')
+    if add =='':
+        break
+    score.append(int(add))
+
+for i in range(len(score)):
+    print(f'Score #{i+1}: {score[i]}')
+
+print(f'Average score is {sum(score)/len(score):.2f}')
+print(f'Minimum score is {int(min(score))}')
+print(f'Maximum score is {int(max(score))}')

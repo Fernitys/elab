@@ -1,0 +1,10 @@
+score = []
+add = 0
+while add !='' :
+    add = input('Input score (or just ENTER to finish): ')
+    if add =='':
+        break
+    score.append(int(add))
+score.sort(reverse = True)
+for i in range(len(score)):
+    print(f'Rank #{i+1}: {score[i]}')

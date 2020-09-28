@@ -1,0 +1,14 @@
+x**3-2*x+1
+
+
+x,y
+
+
+plt.scatter(temperature,humidity,c=rainfall)
+plt.xlabel("Temperature (C)")
+plt.ylabel("Humidity (%)")
+plt.grid(True)
+bar = plt.colorbar()
+bar.ax.set_title("Rainfall (mm)")
+plt.set_cmap("jet")
+plt.show()

@@ -1,0 +1,9 @@
+filename = input('Enter score file: ')
+lines = open(filename).read().splitlines()
+scores = [float(x) for x in lines if x != '']
+for i in range(len(scores)):
+    print(f'Student #{i+1} score: {int(scores[i])}')
+
+print(f'Average score is {sum(scores)/len(scores):.2f}')
+print(f'Minimum score is {int(min(scores))}')
+print(f'Maximum score is {int(max(scores))}')

@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+table = np.loadtxt(input('Enter file name: '),delimiter=',',ndmin=2)
+weight = table.T[0]
+height = table.T[1]
+bmi = weight/((height/100)**2)
+plt.scatter(weight,height,c=bmi)
+
+plt.xlabel("Weight (kg)")
+plt.ylabel("Height (cm)")
+plt.grid(True)
+bar = plt.colorbar()
+bar.ax.set_title("BMI")
+plt.set_cmap("jet")
+plt.show()

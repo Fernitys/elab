@@ -1,0 +1,7 @@
+file = open(input("Enter age file: ")).read().splitlines()
+table = [x.split(',') for x in file if x != '']
+old = max([age[1] for age in table])
+print(f'Oldest person(s) with the age of {old}:')
+for x in table:
+    if x[1] == old:
+        print(f'- {x[0]}')

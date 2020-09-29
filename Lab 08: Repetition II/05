@@ -1,0 +1,16 @@
+h = int(input('Enter the depth of the well: '))
+u = int(input('How high the frog can jump up? '))
+d = int(input('How far the frog slips down? '))
+day = 1
+
+if u-d > 0 or h == u:
+    while h > u:
+        h = h - u
+        print(f'On day {day} the frog leaps to the depth of {h} meters.')
+        h = h + d
+        print(f'At night he slips down to the depth of {h} meters.')
+        day = day + 1
+    print(f'The frog gets out of the well on day {day}.')
+    
+else:
+    print('The frog cannot get out of the well.')

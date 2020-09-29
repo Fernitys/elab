@@ -1,0 +1,42 @@
+def x_max(x,maximum,count_number):
+    if count_number != 1:
+        if x > maximum:
+            maximum = x
+    else:
+        maximum = x
+    return maximum
+
+def x_min(x,minimum,count_number):
+    if count_number != 1:
+        if x < minimum:
+            minimum = x
+    else:
+        minimum = x
+    return minimum
+
+def avg(x,total_number ,count_number ) :
+    SUM = x+total_number
+    average = SUM/count_number
+    return average, SUM
+
+def read_number():
+    count = 0
+    string_number = input('Enter a number (to exit, just [Enter]): ')
+    if string_number == '':
+        print('Nothing to do.')
+    else:
+        Mx = 0
+        Mn = 0
+        sigmaX = 0
+        while string_number != '':
+            count = count+1
+            number = float(string_number )
+            Mx = x_max(x=number,maximum=Mx,count_number=count)
+            Mn = x_min(x=number,minimum=Mn,count_number=count)
+            Avg,sigmaX = avg(x=number,total_number=sigmaX,count_number=count)
+            string_number = input('Enter a number (to exit, just [Enter]): ')
+        print(f'The maximum value is {Mx:.2f}')
+        print(f'The minimum value is {Mn:.2f}')
+        print(f'The average value is {Avg:.2f}')
+        
+read_number()

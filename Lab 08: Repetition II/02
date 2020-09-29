@@ -1,0 +1,15 @@
+num = float(input('Enter a number (or 0 to exit): '))
+nt = 0
+pt = 0
+n,p = 0,0
+while num != 0:
+    if num > 0 :
+        p = num
+        pt = pt+p
+    else:
+        n = num
+        nt = nt+n
+    num = float(input('Enter a number (or 0 to exit): '))
+
+print(f'Sum of all positive numbers is {pt:.2f}')
+print(f'Sum of all negative numbers is {nt:.2f}')
